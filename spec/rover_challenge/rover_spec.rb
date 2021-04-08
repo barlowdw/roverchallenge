@@ -147,6 +147,26 @@ module RoverChallenge
         expect(rover.d).to eq 'W'
       end
     end
+
+    it 'should do example 1 movements' do
+      rover = Rover.new(1, 2, 'N')
+
+      'LMLMLMLMM'.split('').each { |instruction| rover.move instruction }
+
+      expect(rover.x).to eq 1
+      expect(rover.y).to eq 3
+      expect(rover.d).to eq 'N'
+    end
+
+    it 'should do example 2 movements' do
+      rover = Rover.new(3, 3, 'E')
+
+      'MMRMMRMRRM'.split('').each { |instruction| rover.move instruction }
+
+      expect(rover.x).to eq 5
+      expect(rover.y).to eq 1
+      expect(rover.d).to eq 'E'
+    end
   end
 end
 
