@@ -1,6 +1,11 @@
 = roverchallenge
 
-Description goes here.
+A ruby gem that implements the Mars Rover Challenge as specified at https://code.google.com/archive/p/marsrovertechchallenge/
+
+== Setup
+
+* Run gem install bundler
+* Run bundle install
 
 == Contributing to roverchallenge
  
@@ -14,6 +19,6 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2021 Derrick. See LICENSE.txt for
+Copyright (c) 2021 Derrick Barlow. See LICENSE.txt for
 further details.
 
