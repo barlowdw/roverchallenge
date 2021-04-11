@@ -79,5 +79,19 @@ module RoverChallenge
         expect(mission.rovers[1].d).to eq 'E'
       end
     end
+
+    describe '#to_s' do
+        xit 'should display output' do
+            mission = Mission.new(5, 5)
+
+            mission.add_rover(1, 2, 'N', 'LMLMLMLMM')
+            mission.add_rover(3, 3, 'E', 'MMRMMRMRRM')
+
+            expect(mission.to_s).to eq <<~MISSION
+                1 3 N
+                5 1 E
+            MISSION
+        end
+    end
   end
 end
