@@ -26,6 +26,13 @@ module RoverChallenge
         expect { Rover.new('1', nil, 'N', 0, 0, 5, 5) }.to raise_error(TypeError)
       end
 
+      it 'should raise error for out of bounds coordinates' do
+        expect { Rover.new(-1, 0, 'N', 0, 0, 5, 5) }.to raise_error(ArgumentError)
+        expect { Rover.new(0, -1, 'N', 0, 0, 5, 5) }.to raise_error(ArgumentError)
+        expect { Rover.new(6, 2, 'N', 0, 0, 5, 5) }.to raise_error(ArgumentError)
+        expect { Rover.new(2, 6, 'N', 0, 0, 5, 5) }.to raise_error(ArgumentError)
+      end
+
       it 'should truncate cordinates to integer values' do
         rover = Rover.new(3.14, 2.71828, 'N', 0, 0, 5, 5)
 

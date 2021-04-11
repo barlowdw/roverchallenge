@@ -22,6 +22,7 @@ module RoverChallenge
             @y2 = Integer(y2)
 
             raise ArgumentError.new('Invalid direction') unless DIRECTIONS.include? @d
+            raise ArgumentError.new('Invalid position') if @x < @x1 || @x > @x2 || @y < @y1 || @y > @y2
         end
 
         def move(instruction)
