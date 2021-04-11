@@ -11,10 +11,15 @@ module RoverChallenge
 
         attr_reader :x, :y, :d
 
-        def initialize(x, y, d)
+        def initialize(x, y, d, x1, y1, x2, y2)
             @x = Integer(x)
             @y = Integer(y)
             @d = String(d).upcase
+
+            @x1 = Integer(x1)
+            @y1 = Integer(y1)
+            @x2 = Integer(x2)
+            @y2 = Integer(y2)
 
             raise ArgumentError.new('Invalid direction') unless DIRECTIONS.include? @d
         end
@@ -22,7 +27,7 @@ module RoverChallenge
         def move(instruction)
             instruction = String(instruction).upcase
 
-            raise ArgumentError.new('Invalid direction') unless INSTRUCTIONS.include? instruction
+            raise ArgumentError.new('Invalid instruction') unless INSTRUCTIONS.include? instruction
 
             case instruction
             when 'L'
@@ -48,6 +53,11 @@ module RoverChallenge
 
             @x = @x + delta[:x]
             @y = @y + delta[:y]
+
+            @x = @x1 if @x < @x1
+            @x = @x2 if @x > @x2
+            @y = @y1 if @y < @y1
+            @y = @y2 if @y > @y2
         end
     end
 end
