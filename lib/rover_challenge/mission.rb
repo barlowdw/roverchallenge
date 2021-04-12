@@ -16,5 +16,9 @@ module RoverChallenge
 
             @rovers.push(rover)
         end
+
+        def to_s
+            @rovers.map { |rover| rover.to_s }.join("\n") + "\n"
+        end
     end
 end

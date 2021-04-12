@@ -40,6 +40,10 @@ module RoverChallenge
             end
         end
 
+        def to_s
+            "#{@x} #{@y} #{@d}"
+        end
+
         private
 
         def rotate(direction)

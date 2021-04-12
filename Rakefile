@@ -17,10 +17,11 @@ Jeweler::Tasks.new do |gem|
   gem.name = "RoverChallenge"
   gem.homepage = "http://github.com/barlow.dw@gmail.com/roverchallenge"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Rover challenge}
+  gem.description = %Q{Calculates the locations of rovers placed on a rectangular plane provided with the size of the plane, the starting position, starting directions and movement instructions for each rover.}
   gem.email = "barlow.dw@gmail.com"
   gem.authors = ["Derrick"]
+  # gem.executables = ['rover_challenge']
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new

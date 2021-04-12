@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require 'rover_challenge'
+
+RoverChallenge::CLI.run

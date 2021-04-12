@@ -81,7 +81,7 @@ module RoverChallenge
     end
 
     describe '#to_s' do
-        xit 'should display output' do
+        it 'should display output' do
             mission = Mission.new(5, 5)
 
             mission.add_rover(1, 2, 'N', 'LMLMLMLMM')
